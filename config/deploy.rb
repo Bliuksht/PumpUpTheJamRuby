@@ -1,11 +1,14 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.2"
 
-set :application, "Beno aplikacija"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "PumpUpTheJam"
+set :repo_url, "git@github.com:Bliuksht/PumpUpTheJam.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+
+set :rvm_ruby_version, '2.5.1'
+
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
